@@ -1,11 +1,11 @@
 import numpy as np
-import cv2
+import cv2, random. time
 from PIL import ImageGrab
 
 # four character code object for video writer
 fourcc = cv2.VideoWriter_fourcc(*'XVID')
 # video writer object
-out = cv2.VideoWriter("output.avi", fourcc, 25.0, (1366, 768))
+out = cv2.VideoWriter(f"output_Date_{time.strftime(\"%Y_%m_%d_%H_%M_%S\")}_ID_{random.random()}.avi", fourcc, 25.0, (1366, 768))
 
 while True:
 	# capture computer screen
